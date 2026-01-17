@@ -1,0 +1,230 @@
+.deleteContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  padding: 1.5rem;
+}
+
+.deleteCard {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.deleteHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.warningIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.deleteTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #991b1b;
+  margin: 0 0 0.5rem 0;
+}
+
+.deleteSubtitle {
+  font-size: 0.95rem;
+  color: #666666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.errorAlert {
+  padding: 1rem;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border-left: 4px solid #ef4444;
+  margin-bottom: 1.5rem;
+}
+
+.serviceInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.infoSection {
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+}
+
+.infoTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+}
+
+.serviceDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.detailValue {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.statusAvailable {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.statusUnavailable {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.warningText {
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #fff9e6;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #f59e0b;
+}
+
+.deleteActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.cancelButton,
+.confirmDeleteButton {
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+}
+
+.cancelButton:hover:not(:disabled) {
+  background-color: #e8e8e8;
+  transform: translateY(-2px);
+}
+
+.confirmDeleteButton {
+  background-color: #ef4444;
+  color: white;
+}
+
+.confirmDeleteButton:hover:not(:disabled) {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+}
+
+.cancelButton:disabled,
+.confirmDeleteButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loadingMessage {
+  text-align: center;
+  padding: 2rem;
+  color: #666666;
+  font-size: 1rem;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 0.875rem 1.5rem;
+  background-color: #2d7d3d;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.backButton:hover {
+  background-color: #1f5a2b;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .deleteCard {
+    padding: 1.75rem;
+  }
+
+  .deleteTitle {
+    font-size: 1.5rem;
+  }
+
+  .deleteActions {
+    flex-direction: column;
+  }
+
+  .cancelButton,
+  .confirmDeleteButton {
+    width: 100%;
+  }
+}

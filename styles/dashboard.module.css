@@ -1,0 +1,351 @@
+/* Updated dashboard styles for electronics repair platform */
+
+.container {
+  min-height: 100vh;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  color: white;
+  padding: 24px 20px;
+  box-shadow: 0 2px 12px rgba(30, 64, 175, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerContent h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.logoutButton {
+  padding: 10px 20px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.dashboard {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.welcomeSection {
+  margin-bottom: 48px;
+}
+
+.welcomeCard {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.2);
+}
+
+.welcomeCard h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.welcomeCard p {
+  font-size: 1rem;
+  margin: 0 0 24px 0;
+  opacity: 0.95;
+}
+
+.newBookingButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #f97316;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.newBookingButton:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+}
+
+.bookingsSection h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f1419;
+  margin: 0 0 24px 0;
+}
+
+.bookingsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.bookingCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bookingCard:hover {
+  border-color: #f97316;
+  box-shadow: 0 12px 32px rgba(249, 115, 22, 0.15);
+  transform: translateY(-4px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.cardHeader h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f1419;
+  margin: 0;
+  flex: 1;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status.pendente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status.confirmada {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.cancelada {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.bookingInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  flex-grow: 1;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.infoRow .label {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.infoRow span:last-child {
+  color: #0f1419;
+  font-weight: 600;
+}
+
+.bookingId {
+  font-family: monospace;
+  background: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.cardActions {
+  display: flex;
+  gap: 12px;
+}
+
+.cancelButton,
+.viewButton {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.cancelButton {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 2px solid #fecaca;
+}
+
+.cancelButton:hover {
+  background: #fecaca;
+  border-color: #dc2626;
+}
+
+.viewButton {
+  background: #dbeafe;
+  color: #0c4a6e;
+}
+
+.viewButton:hover {
+  background: #bfdbfe;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 40px;
+  background: white;
+  border-radius: 12px;
+  border: 2px dashed #e5e7eb;
+}
+
+.emptyState p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+}
+
+.linkButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.linkButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 24px 16px;
+  }
+
+  .welcomeCard {
+    padding: 24px;
+  }
+
+  .welcomeCard h2 {
+    font-size: 1.3rem;
+  }
+
+  .bookingsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .cancelButton,
+  .viewButton {
+    width: 100%;
+  }
+
+  .headerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .headerContent h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    min-height: auto;
+  }
+
+  .dashboard {
+    padding: 16px;
+  }
+
+  .welcomeCard {
+    padding: 16px;
+  }
+
+  .welcomeCard h2 {
+    font-size: 1.1rem;
+  }
+
+  .bookingsSection h2 {
+    font-size: 1.2rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .infoRow {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

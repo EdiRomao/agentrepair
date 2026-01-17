@@ -1,0 +1,518 @@
+/* Added sidebar styling with responsive layout */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  background: #fafafa;
+}
+
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 12px rgba(30, 64, 175, 0.2);
+}
+
+.sidebarOpen {
+  transform: translateX(0);
+}
+
+.sidebarClosed {
+  transform: translateX(-100%);
+}
+
+.sidebarHeader {
+  padding: 0 24px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebarTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+  word-break: break-word;
+}
+
+.closeSidebarBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.closeSidebarBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.sidebarNav {
+  flex: 1;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  padding: 14px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  font-weight: 500;
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navItemActive {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-left-color: #fbbf24;
+}
+
+.sidebarFooter {
+  padding: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logoutBtn {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(220, 38, 38, 0.2);
+  color: white;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logoutBtn:hover {
+  background: rgba(220, 38, 38, 0.3);
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  position: relative;
+}
+
+.toggleSidebarBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 150;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: none;
+}
+
+.toggleSidebarBtn:hover {
+  border-color: #1e40af;
+  color: #1e40af;
+}
+
+.dashboard {
+  padding: 40px 20px;
+  max-width: 1400px;
+}
+
+.headerSection {
+  margin-bottom: 40px;
+}
+
+.headerSection h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f1419;
+  margin: 0 0 8px 0;
+}
+
+.headerSection p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.statCard {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  border-color: #1e40af;
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.1);
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.filtersSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.searchBox {
+  display: flex;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #1e40af;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.filterButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 10px 16px;
+  background: white;
+  color: #0f1419;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  border-color: #1e40af;
+  color: #1e40af;
+}
+
+.filterButton.active {
+  background: #1e40af;
+  color: white;
+  border-color: #1e40af;
+}
+
+.bookingsSection {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 40px;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.bookingsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingItem {
+  padding: 24px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.bookingItem:hover {
+  background: #f9fafb;
+}
+
+.bookingItem:last-child {
+  border-bottom: none;
+}
+
+.bookingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.bookingTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bookingTitle h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f1419;
+  margin: 0;
+}
+
+.bookingId {
+  background: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.bookingDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.detailsColumn h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e40af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+}
+
+.detailsColumn p {
+  font-size: 0.95rem;
+  color: #0f1419;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.detailsColumn p strong {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.contact {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.bookingActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.confirmButton,
+.rejectButton,
+.completeButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.confirmButton {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.confirmButton:hover {
+  background: #bbf7d0;
+}
+
+.rejectButton {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.rejectButton:hover {
+  background: #fecaca;
+}
+
+.completeButton {
+  background: #dbeafe;
+  color: #0c4a6e;
+}
+
+.completeButton:hover {
+  background: #bfdbfe;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+  }
+
+  .toggleSidebarBtn {
+    display: flex;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .dashboard {
+    padding: 80px 16px 40px;
+  }
+
+  .statsSection {
+    grid-template-columns: 1fr;
+  }
+
+  .filterButtons {
+    flex-direction: column;
+  }
+
+  .filterButton {
+    width: 100%;
+  }
+
+  .bookingDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .bookingActions {
+    flex-direction: column;
+  }
+
+  .confirmButton,
+  .rejectButton,
+  .completeButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 80px 12px 24px;
+  }
+
+  .headerSection h1 {
+    font-size: 1.5rem;
+  }
+
+  .bookingItem {
+    padding: 16px;
+  }
+
+  .statCard {
+    gap: 12px;
+  }
+
+  .statIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .statNumber {
+    font-size: 1.5rem;
+  }
+}

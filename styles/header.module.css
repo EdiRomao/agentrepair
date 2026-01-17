@@ -1,0 +1,108 @@
+.header {
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.logoIcon {
+  font-size: 1.8rem;
+}
+
+.logoText {
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+
+.headerNav {
+  display: flex;
+  gap: 40px;
+  flex: 1;
+}
+
+.navLink {
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #1a1a1a;
+}
+
+.headerActions {
+  display: flex;
+  gap: 15px;
+}
+
+.btnLogin {
+  background: transparent;
+  border: 1px solid #e8e8e8;
+  color: #1a1a1a;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btnLogin:hover {
+  border-color: #1a1a1a;
+  background: #f8f8f8;
+}
+
+.btnSignup {
+  background: #2d7d3d;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btnSignup:hover {
+  background: #245a31;
+  box-shadow: 0 4px 12px rgba(45, 125, 61, 0.2);
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .headerNav {
+    display: none;
+  }
+
+  .headerActions {
+    gap: 10px;
+  }
+}

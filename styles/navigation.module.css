@@ -1,0 +1,83 @@
+.navigation {
+  background: white;
+  padding: 40px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.navButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.navBtn {
+  background: #f8f9fa;
+  border: 2px solid #e8e8e8;
+  padding: 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.navBtn:hover {
+  border-color: #2d7d3d;
+  background: #f0f8f5;
+  transform: translateY(-3px);
+}
+
+.navBtn.active {
+  background: #2d7d3d;
+  border-color: #2d7d3d;
+  color: white;
+}
+
+.icon {
+  font-size: 2.5rem;
+}
+
+.label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.navBtn.active .label {
+  color: white;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.navBtn.active .desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 480px) {
+  .navButtons {
+    grid-template-columns: 1fr;
+  }
+
+  .navBtn {
+    padding: 25px;
+  }
+}
